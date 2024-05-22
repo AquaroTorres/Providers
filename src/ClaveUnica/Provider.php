@@ -13,12 +13,7 @@ class Provider extends AbstractProvider
     /**
      * {@inheritdoc}
      */
-    protected $scopes = [
-        'openid',
-        'run',
-        'name',
-        'email',
-    ];
+    protected $scopes = explode(',',env('CLAVEUNICA_SCOPES', 'openid,run,name'));
 
     protected $scopeSeparator = ' ';
 
